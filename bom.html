@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+<head>
+<meta charset="UTF-8">
+<title>WaveGlide by Nortd Labs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+
+
+
+<body>
+<section class="page-header">
+<h1 class="project-name">WaveGlide</h1>
+<h2 class="project-tagline">An efficient and fully automatic oxygen system for glider pilots.</h2>
+<a href="index.html" class="btn">About</a>
+<a href="build.html" class="btn">Build</a>
+<a href="order.html" class="btn">Buy</a>
+<a href="https://github.com/nortd/WaveGlide" class="btn">View on GitHub</a>
+</section>
+
+
+<section class="main-content">
+
+<h1>
+<a id="waveglide-oxygen-system" class="anchor" href="#waveglide-oxygen-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WaveGlide Bill of Materials</h1>
+
+<p>BOM not ready, stay tuned!</p>
+
+
+
+<h3>
+<a id="oxygen-tank" class="anchor" href="#oxygen-tank" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Oxygen Tank</h3>
+
+<ul>
+<li>aluminium, medical (white in EU)</li>
+<li>2l at 200bar -&gt; 400l of oxygen</li>
+<li>connector: DIN477</li>
+<li>about EUR 100 filled</li>
+</ul>
+
+<p><img src="img/gti-al-cylinder.png" alt="oxygen cylinder"></p>
+
+<h3>
+<a id="pressure-regulator" class="anchor" href="#pressure-regulator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pressure Regulator</h3>
+
+<ul>
+<li>manometer for checking the oxygen level in the cylinder</li>
+<li>flow rate dial (need 15l/min)</li>
+<li>cylinder connector: DIN477</li>
+<li>output: 9/16" male</li>
+<li>O2 GTI Rescue 25</li>
+<li>AeroWay Fast-15</li>
+</ul>
+
+<p><img src="img/gti-rescue-25.png" alt="pressure regulator"></p>
+
+<h3>
+<a id="solenoid-valve" class="anchor" href="#solenoid-valve" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solenoid Valve</h3>
+
+<ul>
+<li>low wattage</li>
+<li>12V</li>
+<li>M5 connectors</li>
+<li>quick connects, color coded</li>
+</ul>
+
+<p><img src="img/airtec.jpg" alt="valve"></p>
+
+<h3>
+<a id="controller" class="anchor" href="#controller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controller</h3>
+
+<ul>
+<li>Arduino-based</li>
+<li>3.7V lipo battery
+
+<ul>
+<li>2000mA -&gt; 7.4W -&gt; 10h</li>
+</ul>
+</li>
+<li>charging via micro-USB</li>
+<li>12V boost converter
+
+<ul>
+<li>PTN04050CAD
+
+<ul>
+<li>100uF - ECA-1HM101</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>breath sensor
+
+<ul>
+<li>MPXV7002DP
+
+<ul>
+<li>1uF - USR1H010MDD</li>
+<li>0.01uF - FK28C0G1H103J</li>
+<li>470pF - K471J15C0GF53L2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>barometric sensor
+
+<ul>
+<li>BMP180, adafruit board for prototyping</li>
+</ul>
+</li>
+<li>solenoid circuitry
+
+<ul>
+<li>SSR, diode, 330 Ohm</li>
+</ul>
+</li>
+<li>interface
+
+<ul>
+<li>STATUS
+
+<ul>
+<li>on/off LED (1x)</li>
+<li>charging/full/low LED</li>
+<li>inhale, exhale, oxygen phase (3x)</li>
+</ul>
+</li>
+<li>DOSE TRIM
+
+<ul>
+<li>-, normal, +, max (4x)
+
+<ul>
+<li>max ignores start altitude</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>START ALTITUDE
+
+<ul>
+<li>1500m, 2800m, 3800m (3x)</li>
+</ul>
+</li>
+<li>buzzer alarm (lack of oxygen flow)</li>
+</ul>
+</li>
+<li>harness clip or arm strap</li>
+</ul>
+
+<h3>
+<a id="nasal-cannula" class="anchor" href="#nasal-cannula" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nasal Cannula</h3>
+
+<ul>
+<li>
+<a href="http://www.teleflexarcatalog.com/anesthesia-respiratory/respiratory/products/15841">Hudson RCI 1104</a> (flared)</li>
+</ul>
+
+<h3>
+<a id="tubing" class="anchor" href="#tubing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tubing</h3>
+
+<ul>
+<li>crush and kink-resistant</li>
+<li>from pressure regulator to controller
+
+<ul>
+<li><a href="https://www.landefeld.de/artikel/en/polyamide-hose-6-x-4-mm-blue-by-meter/PA+6X4+BLAU">Plyamide hose, 6x4, blue</a></li>
+</ul>
+</li>
+<li>to breathing sensor
+
+<ul>
+<li><a href="https://www.landefeld.de/artikel/en/polyamide-hose-4-x-2-7-mm-blue-by-meter/PA+4X2%2c7+BLAU">Polyamide hose 4x2.7 blue</a></li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="tube-coupling" class="anchor" href="#tube-coupling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tube Coupling</h3>
+
+<ul>
+<li><a href="https://www.landefeld.de/artikel/en/straight-push-in-fitting-m-5-6mm-model-series-topline/RIB+01+06+05">coupling M5, 4mm</a></li>
+<li>
+<a href="https://www.landefeld.de/artikel/en/straight-push-in-fitting-m-5-6mm-model-series-topline/RIB+01+06+05">coupling M5, 6mm</a>, 2x</li>
+</ul>
+
+<h3>
+<a id="oxygen-flow-meter" class="anchor" href="#oxygen-flow-meter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Oxygen Flow Meter</h3>
+
+<ul>
+<li><a href="http://www.nelsonoxygen.com/meters.htm">Nelson A3 flow meter</a></li>
+</ul>
+
+
+
+<footer class="site-footer">
+  <span class="site-footer-owner"><a href="https://github.com/nortd/WaveGlide">WaveGlide</a> has been initiated by <a href="https://github.com/nortd">Nortd Labs</a>.</span>
+
+  <span class="site-footer-credits" ><strong>Disclaimer:</strong> Nortd Labs does not warrant nor assume any risks whatsoever with regard to the functions and operation of WaveGlide nor does Nortd Labs warrant for any contents of this web site.</span>
+</footer>
+
+</section>
+
+
+</body>
+</html>
