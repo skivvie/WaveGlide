@@ -335,6 +335,7 @@ void sense_altitude() {
     float temp;
     bmp.getTemperature(&temp);
     temperature = round(temp);
+    temperature = temperature * 9.0 / 5.0 + 32.0; // convert to Fahrenheit for the yanks
     // print numeral
     sprintf(charBuf, "%02i", constrain(temperature, 0, 99));
     tft.fillRect(99, 41, 12, 7, BLACK);
